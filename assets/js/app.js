@@ -37,8 +37,8 @@ d3.csv("data.csv")
 
   //setup X
   var xLinearScale = d3.scaleLinear()
-  .domain([20, d3.max(healthData, d => d.poverty)])
-  .range([0, width]);
+  .domain([d3.max(healthData, d => d.poverty),20])
+  .range([20, width]);
 
 //setup y
 var yLinearScale = d3.scaleLinear()
